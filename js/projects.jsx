@@ -18,7 +18,7 @@ class App extends React.Component{
             <section>
                 <h2>
                     These are all Prototypes made on my spare time or in school,<br/>
-                    While they should produce no errors, for the sake of excersize<br/>
+                    While they should produce no errors, for the sake of exercise<br/>
                     not all functionallity you'd expect from a live webpage is there.<br/>
                     - Johan.
                 </h2>
