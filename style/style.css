@@ -1,0 +1,403 @@
+
+window{
+    overflow: hidden;
+}
+
+body, html{
+    padding: 0px;
+    margin: 0px;
+    height: 100%;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+#cover{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -10;
+}
+
+#clockContainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;  
+    height: 100%;
+}
+#clockDiv{
+    position: relative;
+    margin: auto;
+}
+
+#clock{
+   width: 50vw;
+   height: auto;
+    
+}
+
+#clockHands{
+    position: relative;
+}
+
+#clockHands p{
+    position: absolute;
+    font-size: 1vw;
+    font-weight: bold;
+    font-family:  serif;
+   
+    
+}
+
+#clockNumbers{
+    color: #3a3a2b;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    
+    
+}
+
+#h0{
+    left: 27vw;
+    bottom: 22vw;
+}
+#h3{
+    left: 31.5vw;
+    bottom: 16.3vw;
+}
+#h6{
+    left: 27vw;
+    bottom: 10.5vw;
+}
+#h9{
+    left: 21.5vw;
+    bottom: 16.3vw;
+}
+
+#longHand, #shortHand{
+    display: block;
+    left: 28vw;
+    bottom: 16.3vw;
+    padding-left: 5px;
+    text-shadow: 3px 3px 1px rgba(0,0,0,0.3);
+    
+}
+
+#longHand{
+    -webkit-transform: rotate(6deg);
+    transform: rotate(190deg);
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 0% 50%;
+    
+}
+
+#longHand span, #shortHand span{
+    display: inline-block;  
+    -webkit-transition: 1s ease-in; 
+    transition: 1s ease-in;
+}
+
+
+#shortHand{
+    -webkit-transform: rotate(300deg);
+    transform: rotate(270deg);
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 0% 50%;
+}
+#secondsHand{
+    position: absolute;
+    height: 1px;
+    background-color: black;
+    width: 6vw;
+    display: block;
+    left: 28vw;
+    bottom: 17.8vw;
+    padding-left: 5px;
+    -webkit-transform: rotate(280deg);
+    transform: rotate(280deg);
+    -webkit-transform-origin: 10% 70%;
+    transform-origin: 0% 50%;
+    box-shadow: 3px 3px 2px rgba(0,0,0,0.4);
+}
+
+
+.floating{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0,0,0,0.4);
+    background-size: contain;    
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    opacity: 0.5;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-transform: rotateY(-10deg);
+    transform: rotateY(-8deg);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.4);
+    cursor: pointer;
+    
+}
+
+
+.floating img{
+     position: absolute;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    border-radius: 2px;
+    -webkit-transform: rotateY(-10deg);
+    transform: rotateY(-8deg);
+    border: #252525;
+}
+
+.floating p{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-family: 'Homenaje', sans-serif;
+    color: white;
+    font-weight: bold;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    
+}
+
+.floating:hover{
+    opacity: 1; 
+     -webkit-transition: 1s ease-in-out; 
+    transition: 1s ease-in-out;
+}
+
+
+
+
+#about{
+    top: 70%;
+    left: 15%;
+    width: 15vw;
+    height: 11.255vw;
+    background-image: url(/rescources/aboutBackground.jpg); 
+   
+}
+
+#about:hover{
+     -webkit-transform: scale(1.2,1.2);
+     transform: scale(1.2,1.2);
+}
+
+#about > div{
+    position: absolute;
+    background-color: #EEE;
+    bottom: 8vw;
+    left: -2vw;
+    padding: 0.5vw;
+
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    border-radius: 2px;
+    -webkit-transform: rotateY(-10deg);
+    transform: rotateY(-8deg);
+    border: #252525;
+    text-align: center;
+    font-family: 'Satisfy', cursive;
+}
+
+#about img{
+    height: 10vw;
+    width: auto;
+    position: relative;
+    box-shadow: none; 
+    border: 1px solid #AAA;
+}
+
+#about p{
+    font-size: 3vw;
+    margin-top: 4.5vw;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+    text-align: center;
+     
+}
+
+#projects{
+    top: 5%;
+    left: 15%;
+    width: 20vw;
+    height: 15.14vw;
+    background-image: url(/rescources/projectsBackground.jpg); 
+   
+}
+
+#projects:hover{
+   
+    -webkit-transform: scale(1,1);
+    transform: scale(1.2,1.2);
+}
+
+#projects p{
+    margin-top: 5vw;
+    font-size: 4vw;
+}
+
+#cv{
+   top: 75%;
+   right: 14%;
+   width: 18vw;
+   height: 8.59vw;
+   background-image: url(/rescources/cvBackground.jpg); 
+    
+}
+#cv p{
+    margin-top: 2vw;
+    font-size: 2.5vw;
+    margin-left: 9.5vw;
+}
+
+#cv:hover{
+   -webkit-transform: scale(1.2,1.2);
+   transform: scale(1.2,1.2);
+}
+
+#aboutProjects{
+   top: 13%;
+   right: 10%;
+   width: 25vw;
+   height: 11.4vw;
+    background-image: url(/rescources/aboutProjectsBackground.png); 
+     
+}
+
+#aboutProjects:hover{
+   -webkit-transform: scale(1.2,1.2);
+   transform: scale(1.2,1.2);
+}
+
+#aboutProjects p{
+    margin-top: 7.5vw;
+    font-size: 2.5vw;
+    
+}
+
+#welcomeBack{
+    display: none;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    top: 10vh;
+    text-align: center;
+    font-family: 'Homenaje', sans-serif;
+    color: #EEE;
+    font-size: 6vw;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+    -webkit-animation-name: welcomeText;
+    animation-name: welcomeText;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+     -webkit-transition: 3s ease-in-out; 
+    transition: 3s ease-in-out;
+}
+
+#welcomeFirst{
+    position: absolute;
+    margin: auto;
+    width: 90vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    top: 10vh;
+    text-align: center;
+    font-family: 'Homenaje', sans-serif;
+    color: #EEE;
+    font-size: 6vw;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000; 
+}
+
+.endAnimation{
+       -webkit-animation-name: endOut;
+    animation-name: endOut;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+     -webkit-transition: 1.5s ease-in-out; 
+    transition: 1.5s ease-in-out;
+}
+/*=========================================================================*/
+/*KeyFrames and Media Querys*/
+
+@-webkit-keyframes welcomeText{
+    0%{
+        opacity: 0;
+        font-size: 5vw;
+    }
+    
+    50%{
+        opacity: 1;
+        font-size: 6vw;
+    }
+    
+    100% {
+        opacity: 0;
+        font-size: 6vw;
+        display: none;
+    }
+}
+
+@keyframes welcomeText{
+     0%{
+        opacity: 0;
+        font-size: 5vw;
+    }
+    
+    50%{
+        opacity: 1;
+        font-size: 6vw;
+    }
+    
+    100% {
+        opacity: 0;
+        font-size: 6vw;
+        display: none;
+    }
+}
+
+@-webkit-keyframes endOut{
+     0%{
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes endOut{
+     0%{
+        opacity: 1;
+    }
+    
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
