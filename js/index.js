@@ -1,10 +1,6 @@
-/*jshint esnext: true, moz: true*/
-/*jslint browser:true */
-/*global*/
 
 //=======================================================
 //GLOBALS
-var floatingDivs = document.getElementsByClassName("floating");
 var prevPosX= 0, prevPosY = 0;
 var html = document.getElementsByTagName("html")[0];
 //=======================================================
@@ -70,18 +66,19 @@ function firstVisit(){
 }
 
 
-
 function oldPosToNum(str){
     let num = "";
     for(let i = 0; i < str.length; i++){
-        if(!isNaN(str[i]) || str[i] == "."){
+        if(!isNaN(str[i]) || str[i] === "."){
             num += str[i];
         }
         
     }
-    
+
     num = Number(num)+0.5;
     return Math.floor(num);
+
+
 }
 
 
@@ -91,19 +88,19 @@ function setPosOnDiv(elm,x,change){
     let newValue = 0;
     
     
-    if(x == "x" && change == "inc"){
+    if(x === "x" && change === "inc"){
         newValue = oldPosToNum(comutedLeftPos)+1;
         elm.style.left = `${newValue}px`;
     }
-    else if(x == "x" && change == "dec"){
+    else if(x === "x" && change === "dec"){
         newValue = oldPosToNum(comutedLeftPos)-1;
         elm.style.left = `${newValue}px`;
     }
-    else if(x == "y" && change == "inc"){
+    else if(x === "y" && change === "inc"){
         newValue = oldPosToNum(computedTopPos)+1;
         elm.style.top = `${newValue}px`;
     }
-    else if(x == "y" && change == "dec"){
+    else if(x === "y" && change === "dec"){
         newValue = oldPosToNum(computedTopPos)-1;
         elm.style.top = `${newValue}px`;
     }
