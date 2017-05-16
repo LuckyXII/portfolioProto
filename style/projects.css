@@ -12,32 +12,42 @@ html,body{
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    -ms-flex-wrap: wra;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    z-index: 5;
 }
 
 #app-container{
-   
+   z-index: 5;
     width:auto;
-    border-left: 1px solid #EEE;
-    border-right: 1px solid #EEE;
-    background-color: #EEE;
+    border-left: 1px solid rgba(100,100,100, 0.4);
+    border-right: 1px solid rgba(100,100,100, 0.4);
+    background-color: rgba(245,245,245, 0.4);
     padding: 100px;
+    padding-top: 50px;
     box-shadow:  0 0 35px rgba(0,0,0,0.8);
 }
 
 h2{
     z-index: 10;
     text-align: center;
-    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
-    background-color: cornflowerblue;
+    background-color: #cb6c2a;
+    background: linear-gradient(to bottom, #f7ab60 31%, #f0983e 48%, #cb6c2a 100%);
     margin: 0;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    font-family: 'Caveat', cursive;
+
 }
 
 .wrapper{
@@ -47,10 +57,11 @@ h2{
     margin: 60px;
     padding: 20px;
     border-radius: 3px;
+    z-index: 10;
 }
 
 .title{
-    
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .cover{
@@ -60,11 +71,53 @@ h2{
 }
 
 .description{
-    max-width: 30vw;   
+    max-width: 30vw;
+    font-family: sans-serif;
 }
+
+.note{
+    font-family: serif;
+}
+
 
 a{
     text-decoration: none;
     font-style: italic;
     color: black;
+}
+
+#parallax{
+    position: fixed;
+    height: 100%;
+    background-image: url("/portfolioProto/rescources/river-690374.jpg");
+    width: 100vw;
+    z-index: -10;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer h2{
+    background: none;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    background-color: rgba(200,200,200,0.7);
+    margin: 0;
+    color: white;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+.footer a, .footer span{
+    color: #ff9d22;
+    text-shadow:
+        -0.5px -0.5px 0 #303030,
+        0.5px -0.5px 0 #303030,
+        -0.5px 0.5px 0 #303030,
+        0.5px 0.5px 0 #303030;
 }

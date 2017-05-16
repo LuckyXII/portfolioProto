@@ -188,7 +188,7 @@ body, html{
     left: 15%;
     width: 15vw;
     height: 11.255vw;
-    background-image: url(/rescources/aboutBackground.jpg);
+    background-image: url(/portfolioProto//rescources/aboutBackground.jpg);
    
 }
 
@@ -238,7 +238,7 @@ body, html{
     left: 15%;
     width: 20vw;
     height: 15.14vw;
-    background-image: url(/rescources/projectsBackground.jpg); 
+    background-image: url(/portfolioProto//rescources/projectsBackground.jpg);
    
 }
 
@@ -258,7 +258,7 @@ body, html{
    right: 14%;
    width: 18vw;
    height: 8.59vw;
-   background-image: url(/rescources/cvBackground.jpg); 
+   background-image: url(/portfolioProto//rescources/cvBackground.jpg);
     
 }
 #cv p{
@@ -277,7 +277,7 @@ body, html{
    right: 10%;
    width: 25vw;
    height: 11.4vw;
-    background-image: url(/rescources/aboutProjectsBackground.png);
+    background-image: url(/portfolioProto//rescources/aboutProjectsBackground.png);
      
 }
 
